@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler deploy --minify src/index.ts", 
+    "sqlinit": "npx wrangler d1 execute menu --remote --file=./src/schema.sql",
+    "sqllocalinit": "npx wrangler d1 execute menu --local --file=./src/schema.sql"
+  },
+  "dependencies": {
+    "hono": "^4.3.7",
+    "uuid": "^9.0.1",
+    "workers-qb": "^1.2.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240512.0",
+    "@types/uuid": "^9.0.8",
+    "wrangler": "^3.47.0"
+  }
+}
